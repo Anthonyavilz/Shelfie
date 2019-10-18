@@ -1,15 +1,15 @@
 import React from 'react';
 
 class Header extends React.Component {
-    constructor() {
-      super();
+    // constructor() {
+    //   super();
   
-    }
+    // }
   
     render() {
       return(
         <div>
-            <h1>Header</h1>
+            <h1>Shelfie</h1>
         </div>
       )
     }

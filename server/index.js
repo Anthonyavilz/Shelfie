@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const massive = require('massive');
 const { CONNECTION_STRING } = process.env
-const { } = require('./controller');
+const { getInventory, createProduct } = require('./controller');
 
 const app = express();
 
@@ -16,5 +16,7 @@ massive(CONNECTION_STRING)
     })
 
 app.use(express.json);
+app.get('/api/inventory', getInventory);
+app.post('/api/product', createProduct);
 
 app.listen(8760, () => console.log('Running on port 8760'));

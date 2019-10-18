@@ -1,19 +1,15 @@
 import React from 'react';
 import Product from '../Product/Product';
 
-class Dashboard extends React.Component {
-    constructor() {
-      super();
-  
-    }
-  
+class Dashboard extends React.Component {  
     render() {
       return(
         <div>
-          <h1>Dashboard</h1>  
-          <Product />
+            {this.props.inventory.map((element) => {
+                return <Product key={element.id} item={element}/> 
+            })}
         </div>
-      )
+      );
     }
   
   }
